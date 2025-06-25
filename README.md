@@ -15,7 +15,7 @@ A Django REST API application for processing IoT device payloads with token auth
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/HanlinMiao/iot_device_processor.git
 cd iot_device_processor
 ```
 
@@ -64,7 +64,7 @@ python manage.py shell
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 
-user = User.objects.get(username='your_username')
+user = User.objects.create(username='test_user')
 token, created = Token.objects.get_or_create(user=user)
 print(f"Your token: {token.key}")
 ```
